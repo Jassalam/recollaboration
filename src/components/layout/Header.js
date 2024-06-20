@@ -1,3 +1,5 @@
+"use client"
+import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
 import Link from "next/link";
 
 export default function Header() {
@@ -14,10 +16,10 @@ export default function Header() {
                 <Link href={''}>Contact Us</Link>
             </nav>
             <nav className='flex items-center gap-4 text-gray-500 font-semibold'>
-             <Link href={'/login'}>Login</Link>   
-            <Link href={'/register'} className="bg-primary rounded-full text-white px-8 py-2">
+             <LoginLink><button>Login</button></LoginLink>   
+            <RegisterLink><Link href={'/register'} className="bg-primary rounded-full text-white px-8 py-2">
                     Register
-                </Link> 
+                </Link></RegisterLink> 
             </nav>
         </header>
     );
